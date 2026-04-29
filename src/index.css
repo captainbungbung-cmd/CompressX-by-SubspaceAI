@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-violet-50 text-violet-900 font-sans antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white rounded-3xl border border-violet-100 shadow-sm transition-all;
+}
+
+.markdown-body {
+  @apply text-violet-700 leading-relaxed text-base;
+}
+
+.markdown-body h1 {
+  @apply text-violet-900 font-bold text-3xl mt-10 mb-6 border-b border-violet-100 pb-2 flex items-center gap-2;
+}
+
+.markdown-body h2 {
+  @apply text-violet-900 font-bold text-xl mt-8 mb-4 uppercase tracking-wider flex items-center gap-2;
+}
+
+.markdown-body h3 {
+  @apply text-violet-800 font-semibold text-lg mt-6 mb-2;
+}
+
+.markdown-body p {
+  @apply my-4 text-violet-600/90 leading-relaxed;
+}
+
+.markdown-body ul {
+  @apply space-y-3 my-6 list-none;
+}
+
+.markdown-body li {
+  @apply relative pl-6 text-violet-600/90;
+}
+
+.markdown-body li::before {
+  content: "•";
+  @apply absolute left-0 text-violet-400 font-bold;
+}
+
+.markdown-body strong {
+  @apply text-violet-900 font-bold;
+}
+
+.markdown-body blockquote {
+  @apply bg-violet-50/50 p-6 rounded-2xl border-l-4 border-violet-400 my-6 italic text-violet-700 shadow-inner translate-x-1;
+}
+
+.markdown-body hr {
+  @apply border-violet-100 my-10;
+}
+
+.markdown-body code {
+  @apply bg-violet-100/50 text-violet-900 px-1.5 py-0.5 rounded text-sm font-mono font-medium;
+}
+
